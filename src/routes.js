@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Home from './pages/Home'
 import MeusLinks from './pages/MeusLinks'
+import Error from './pages/Error'
 
 function RoutesApp(){
   return(
@@ -9,6 +10,7 @@ function RoutesApp(){
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/meus-links" element={<MeusLinks/>}/>
+        <Route path="*" element={<Error/>}/>
       </Routes>
     </BrowserRouter>
   )

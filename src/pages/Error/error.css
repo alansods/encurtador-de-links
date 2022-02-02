@@ -1,0 +1,29 @@
+.container-error{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-error h1{
+  color: #fff;
+  text-align: center;
+}
+
+.container-error a{
+  background: #fff;
+  margin: 20px 0;
+  padding: 10px 30px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #132742;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.container-error a:hover{
+  background: #37C984;
+  color: #fff;
+}

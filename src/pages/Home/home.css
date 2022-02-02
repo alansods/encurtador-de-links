@@ -50,13 +50,17 @@
 
 @keyframes slideY{
   from{
-    transform: translateY(90px);
+    transform: translateY(50px);
     opacity: 0;
   }
   to{
     transform: translateY(0);
     opacity: 100%;
   }
+}
+
+.menu{
+  animation: transparencia 1.5s ease-out;
 }
 
 .area-input div{
@@ -99,13 +103,14 @@
   color: rgba(255, 255, 255);
   font-weight: bold;
   margin-top: 8px;
-  transition: transform 0.2s ease;
+  transition: all 0.2s ease;
   background: #37C984;
   opacity: 0;
 }
 
 .area-input button:hover{
   transform: scale(1.05);
+  background: #4ae79e;
 }
 
 
