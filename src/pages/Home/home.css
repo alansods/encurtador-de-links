@@ -84,7 +84,7 @@
 }
 
 .area-input input::placeholder{
-  color: rgb(255, 255, 255, 0.8);
+  color: rgb(255, 255, 255, 0.5);
 }
 
 .area-input button{
@@ -95,10 +95,11 @@
   border-radius: 4px;
   border: 0;
   font-size: 16px;
-  color: #000;
+  color: #fff;
   font-weight: bold;
   margin-top: 8px;
   transition: transform 0.2s ease;
+  background: #11e493;
 }
 
 .area-input button:hover{
