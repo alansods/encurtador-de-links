@@ -9,7 +9,10 @@ export default function MeusLinks() {
 
       <div className="links-header">
         <Link to={"/"}>
-        <FiArrowLeft size={38} color='#fff' />
+          <div className='voltar'>
+          <FiArrowLeft size={28} color='#132742' />
+          </div>
+        
         </Link>
         <h1>Meus Links</h1>
       </div>
