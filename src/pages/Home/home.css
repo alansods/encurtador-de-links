@@ -22,6 +22,7 @@
 .logo h1{
   font-size: 60px;
   color: #fff;
+  text-align: center;
 }
 
 .logo span {
@@ -118,7 +119,7 @@
   }
 
   .logo h1{
-    font-size: 36px;
+    font-size: 36px !important;
   }
 
   .logo span{
