@@ -11,6 +11,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: transparencia 1.5s ease-out;
 }
 
 .logo h1{
@@ -30,6 +31,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@keyframes transparencia{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 100%;
+  }
 }
 
 @keyframes slideY{
