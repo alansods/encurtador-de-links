@@ -1,9 +1,13 @@
+import './home.css'
+import { useState } from 'react'
 import { FiLink } from 'react-icons/fi'
+
 import Menu from '../../components/Menu'
 import LinkItem from '../../components/LinkItem'
-import { useState } from 'react'
-import './home.css'
+
 import api from '../../services/api'
+import { saveLink } from '../../services/storeLinks'
+
 
 export default function Home() {
   const [link, setLink] = useState('')
@@ -18,6 +22,7 @@ export default function Home() {
 
       setData(response.data)
       setShowModal(true)
+      saveLink('@encurtaLink', response.data)
       setLink('')
 
     }catch{
@@ -32,7 +37,7 @@ export default function Home() {
       <div className="logo">
       <lottie-player style={{width: "220px", height: "220px", "border-radius": "50%", background: "#fff", padding: "15px", "margin-bottom": "15px"}} src="https://assets8.lottiefiles.com/packages/lf20_fzpss2yc.json"  background="transparent" speed="1" loop  autoplay></lottie-player>
         <h1>Encurtador de Links</h1>
-        {/* <span>Cole seu link aqui 👇</span> */}
+        <span>Cole seu link aqui 👇</span>
       </div>
 
       <div className="area-input">
