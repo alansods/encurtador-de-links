@@ -4,6 +4,11 @@
   animation: entrada .5s ease;
 }
 
+.empty-text{
+  color: #fff;
+  text-align: center;
+}
+
 @keyframes entrada{
   from{
     opacity: 0;

@@ -18,7 +18,7 @@ export async function saveLink(key, newLink){
   }
 
   //adicionar novo link na lista
-  linksStored.push(newLink)
+  linksStored.unshift(newLink)
   await localStorage.setItem(key, JSON.stringify(linksStored))
   console.log("Link salvo com sucesso!")
 }
@@ -30,7 +30,7 @@ export function deleteLink(links, id){
   let myLinks = links.filter((link) => {
     return (link.id !== id)
   })
-  
+
   localStorage.setItem('@encurtaLink', JSON.stringify(myLinks))
   return myLinks
 }
