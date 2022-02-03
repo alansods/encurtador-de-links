@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  animation: entrada .4s ease-in-out;
+  animation: entrada .5s ease;
 
 }
 
@@ -17,7 +17,7 @@
 @keyframes entrada{
   from{
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-30px);
   }
   to{
     opacity: 100%;

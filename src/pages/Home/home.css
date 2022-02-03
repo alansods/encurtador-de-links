@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: transparencia 1.5s ease-out;
+  animation: transparencia .8s ease-out;
 }
 
 .lottie {
@@ -51,7 +51,7 @@
 
 @keyframes slideY{
   from{
-    transform: translateY(50px);
+    transform: translateY(40px);
     opacity: 0;
   }
   to{
@@ -61,11 +61,11 @@
 }
 
 .menu{
-  animation: transparencia 1.5s ease-out;
+  animation: transparencia .8s ease-out;
 }
 
 .area-input div{
-  animation: slideY .5s ease-out;
+  animation: slideY .4s ease-out;
   width: 100%;
   height: 46px;
   background-color: rgb(255,255,255, 0.15);
@@ -94,7 +94,7 @@
 }
 
 .area-input button{
-  animation: slideY .5s ease-out forwards;
+  animation: slideY .4s ease-out forwards;
   animation-delay: .15s;
   width: 100%;
   height: 46px;
