@@ -3,13 +3,14 @@ import { FiArrowLeft, FiLink, FiTrash } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-import { getLinkSave } from "../../services/storeLinks";
+import { deleteLink, getLinkSave } from "../../services/storeLinks";
 import LinkItem from '../../components/LinkItem'
 
 export default function MeusLinks() {
   const [myLinks, setMyLinks] = useState([]);
   const [data, setData] = useState({});
   const [showModal, setShowModal] = useState(false);
+  const [EmptyList, setEmptyList] = useState(false)
 
   useEffect(() => {
     async function getLinks() {
@@ -17,6 +18,7 @@ export default function MeusLinks() {
 
       if (result.length === 0) {
         //nossa lista esta vazia.
+        setEmptyList(true)
       }
       setMyLinks(result);
     }
@@ -27,6 +29,16 @@ export default function MeusLinks() {
   function handleOpenLink(link){
     setData(link)
     setShowModal(true)
+  }
+
+  async function handleDelete(id){
+    const result = await deleteLink(myLinks, id)
+
+    if (result.length === 0){
+      console.log("nao tem mais links")
+      setEmptyList(true)
+    }
+    setMyLinks(result)
   }
 
   return (
@@ -40,13 +52,19 @@ export default function MeusLinks() {
         <h1>Meus Links</h1>
       </div>
 
+      { EmptyList && (
+        <div>
+          <lottie-player src="https://assets10.lottiefiles.com/temp/lf20_Celp8h.json"  background="transparent"  speed="1"  style={{width: "330px", height: "330px", margin: "0 auto"}} loop autoplay></lottie-player>
+        </div>
+      ) }
+
       {myLinks.map((link) => (
         <div key={link.id} className="links-item">
           <button className="link" onClick={ () => handleOpenLink(link) }>
             <FiLink size={18} color="#fff" />
             {link.long_url}
           </button>
-          <button className="link-delete">
+          <button className="link-delete" onClick={() => handleDelete(link.id)}>
             <FiTrash size={24} color="#ff5454" />
           </button>
         </div>
