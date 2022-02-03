@@ -1,6 +1,6 @@
 // Buscar links salvos.
 export async function getLinkSave(key){
-  const myLinks = await localStorage.getItem('key')
+  const myLinks = await localStorage.getItem(key)
   let linksSaves = JSON.parse(myLinks) || []
   return linksSaves
 }
