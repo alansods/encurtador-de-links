@@ -2,6 +2,10 @@
   width: 1120px;
   margin: 32px auto 0 auto;
   animation: entrada .5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .empty-text{
@@ -25,6 +29,7 @@
   flex-direction: row;
   align-items: center;
   margin-bottom: 50px;
+  width: 100%;
 }
 
 .voltar{
