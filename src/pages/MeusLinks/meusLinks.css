@@ -1,11 +1,12 @@
 .links-container{
   width: 1120px;
   margin: 32px auto 0 auto;
-  animation: entrada .5s ease;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  animation: entrada .5s ease;
+
 }
 
 .empty-text{
@@ -23,6 +24,18 @@
     transform: translateY(0);
   }
 }
+
+@keyframes items{
+  from{
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .links-header{
   display: flex;
@@ -62,6 +75,9 @@
   flex-direction: row;
   align-items: center;
   margin: 8px auto 0 auto;
+  animation: items .5s ease;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 .links-item:last-child{

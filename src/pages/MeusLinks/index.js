@@ -11,6 +11,7 @@ export default function MeusLinks() {
   const [data, setData] = useState({});
   const [showModal, setShowModal] = useState(false);
   const [EmptyList, setEmptyList] = useState(false)
+  const delay = 100
 
   useEffect(() => {
     async function getLinks() {
@@ -59,8 +60,8 @@ export default function MeusLinks() {
         </div>
       ) }
 
-      {myLinks.map((link) => (
-        <div key={link.id} className="links-item">
+      {myLinks.map((link, i) => (
+        <div key={link.id} className="links-item" style={{animationDelay: `${delay * i}ms`}}>
           <button className="link" onClick={ () => handleOpenLink(link) }>
             <FiLink size={18} color="#fff" />
             {link.long_url}
