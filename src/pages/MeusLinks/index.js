@@ -55,7 +55,7 @@ export default function MeusLinks() {
 
       { EmptyList && (
         <div>
-          <lottie-player src="https://assets10.lottiefiles.com/temp/lf20_Celp8h.json"  background="transparent"  speed="1"  style={{width: "330px", height: "330px", margin: "0 auto"}} loop autoplay></lottie-player>
+          <lottie-player src="https://assets10.lottiefiles.com/temp/lf20_Celp8h.json"  background="transparent"  speed="1"  style={{width: "330px", height: "330px", margin: "0 auto"}}  autoplay></lottie-player>
           <h2 className="empty-text">Lista de links vazia.</h2>
         </div>
       ) }
